@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuke: El Latido de los Tres Reinos</title>
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- FUENTE CINZEL -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- ESTILOS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/efectos.css">
+</head>
+<body>
+
+<!-- VIDEO DE FONDO -->
+<video autoplay muted loop id="bg-video">
+    <source src="img/fondo-mistico.mp4" type="video/mp4">
+</video>
+
+<!-- BOTÓN PARA ACTIVAR SONIDO -->
+<button id="btn-sound" class="btn-sound">🔊 Activar sonido</button>
+
+<!-- PARTÍCULAS -->
+<canvas id="particulas"></canvas>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="logo-container d-flex align-items-center">
+        <img src="img/logo.png" alt="Logo Spectral Code" class="logo-img me-2">
+        <h1 class="logo mb-0">Spectral Code</h1>
+    </div>
+    <nav>
+        <a href="#intro">Inicio</a>
+        <a href="#reinos">Reinos</a>
+        <a href="#criaturas">Criaturas</a>
+        <a href="#minijuegos">Minijuegos</a>
+        <a href="#galeria">Galería</a>
+    </nav>
+</header>
+
+<!-- PORTADA -->
+<section id="intro" class="hero fade d-flex align-items-center justify-content-center text-center">
+    <div class="hero-content p-4 rounded bg-dark bg-opacity-50">
+        <h2 class="text-white display-4 fw-bold">Yuke: El Latido de los Tres Reinos</h2>
+        <p class="text-white fs-5">Un latido que despierta. Tres reinos que esperan. Tu historia comienza aquí.</p>
+        <button class="btn btn-warning btn-lg mt-3" 
+                onclick="document.getElementById('reinos').scrollIntoView({ behavior: 'smooth' });">
+            Explorar
+        </button>
+    </div>
+</section>
+
+<!-- REINOS -->
+<section id="reinos" class="section fade py-5">
+    <div class="container">
+        <h2 class="text-white text-center mb-4 display-5">Los Tres Reinos</h2>
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="card bg-dark bg-opacity-75 text-white h-100 p-3 costa">
+                    <h3 class="card-title">Costa</h3>
+                    <p>En la costa, conoce a Luna, una joven que canta al mar cada noche esperando a su amado. Pero su tristeza ha creado una sombra que impide que Yuke se acerque.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card bg-dark bg-opacity-75 text-white h-100 p-3 sierra">
+                    <h3 class="card-title">Sierra</h3>
+                    <p>En la sierra, se enfrenta al Guardián del Templo, una criatura de piedra que repite los errores del pasado y lo reta a romper el ciclo del dolor.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card bg-dark bg-opacity-75 text-white h-100 p-3 selva">
+                    <h3 class="card-title">Selva</h3>
+                    <p>En la selva, los espíritus lo rechazan por no ser humano, y lo obligan a demostrar que el amor verdadero no se posee, se honra.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CRIATURAS -->
+<section id="criaturas" class="section fade py-5">
+    <div class="container">
+        <h2 class="text-white text-center mb-4 display-5">Criaturas del Mundo</h2>
+        <ul class="list-group list-group-flush text-white">
+            <li class="list-group-item bg-dark bg-opacity-75 mb-2">🦙 Llamas guardianas — protectoras de la Sierra.</li>
+            <li class="list-group-item bg-dark bg-opacity-75 mb-2">🧜‍♀️ Sirenas — guías de la Costa.</li>
+            <li class="list-group-item bg-dark bg-opacity-75 mb-2">🐺 Lobos espirituales — vigías de la Selva.</li>
+        </ul>
+    </div>
+</section>
+
+<!-- MINIJUEGOS -->
+<section id="minijuegos" class="section fade py-5">
+    <div class="container">
+        <h2 class="text-white text-center mb-4 display-5">Minijuegos</h2>
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="card bg-dark bg-opacity-75 text-white h-100 p-3">
+                    <p>Yuke: El protagonista, un muñeco Budú con forma de gato, que busca el fragmento del deseo.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card bg-dark bg-opacity-75 text-white h-100 p-3">
+                    <p>Yuke: El protagonista, que busca el fragmento del recuerdo.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card bg-dark bg-opacity-75 text-white h-100 p-3">
+                    <p>Yuke: El protagonista, que busca el fragmento de la promesa.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- GALERÍA -->
+<section id="galeria" class="section fade py-5">
+    <div class="container">
+        <h2 class="text-white text-center mb-4 display-5">Galería</h2>
+        <div class="row g-3">
+            <div class="col-md-4"><img src="img/costa.jpg" class="img-fluid rounded bg-dark bg-opacity-50 p-1" alt="Costa"></div>
+            <div class="col-md-4"><img src="img/sierra.jpg" class="img-fluid rounded bg-dark bg-opacity-50 p-1" alt="Sierra"></div>
+            <div class="col-md-4"><img src="img/selva.jpg" class="img-fluid rounded bg-dark bg-opacity-50 p-1" alt="Selva"></div>
+        </div>
+    </div>
+</section>
+
+<!-- SCRIPTS -->
+<script src="js/script.js" defer></script>
+<script src="js/particulas.js" defer></script>
+
+</body>
+</html>
