@@ -1,0 +1,96 @@
+/* Efecto de niebla */
+.section.sierra::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    top: 0;
+    left: 0;
+    background: radial-gradient(rgba(255,255,255,0.2), transparent);
+    filter: blur(20px);
+}
+
+/* Ondas de agua */
+.costa:hover {
+    box-shadow: 0 0 20px var(--costa);
+}
+
+/* Efecto selvático */
+.selva:hover {
+    box-shadow: 0 0 20px var(--selva);
+}
+
+.costa {
+    position: relative;
+    overflow: hidden;
+}
+
+.costa::after {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background: rgba(255,255,255,0.1);
+    animation: waves 4s infinite linear;
+}
+
+@keyframes waves {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(50%); }
+}
+
+.sierra {
+    position: relative;
+}
+
+.sierra::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150%;
+    height: 150%;
+    background: url('../img/niebla.png');
+    background-size: cover;
+    opacity: 0.25;
+    animation: fog 12s infinite ease-in-out;
+}
+
+@keyframes fog {
+    0% { transform: translateX(-10px); }
+    50% { transform: translateX(20px); }
+    100% { transform: translateX(-10px); }
+}
+
+.hojas::before, .hojas::after {
+    content: "🍃";
+    position: fixed;
+    font-size: 30px;
+    animation: fall 5s infinite linear;
+}
+
+.hojas::after {
+    left: 70%;
+}
+
+@keyframes fall {
+    0% { transform: translateY(-100px); }
+    100% { transform: translateY(120vh); }
+}
+
+body {
+    cursor: none;
+}
+
+.cursor-magic {
+    position: fixed;
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: 0.1s;
+}
+
